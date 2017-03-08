@@ -85,7 +85,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('clean-html', function() {
-  return gulp.src(dest.html, {read: false, force: true })
+  return gulp.src(dest.html+'*.html', {read: false, force: true })
       .pipe(clean());
 });
 
