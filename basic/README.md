@@ -1,1 +1,1 @@
-Gulp templates with bootstrap, fontAwesome and jquery
+Basic Gulp template with reset and jquery
