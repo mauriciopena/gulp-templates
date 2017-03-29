@@ -2,6 +2,7 @@ var
     gulp = require('gulp'),
     sass = require('gulp-sass');
     clean = require('gulp-clean');
+    autoprefixer = require('gulp-autoprefixer');
     browserSync = require('browser-sync');
     reload = browserSync.reload;
     concat = require('gulp-concat');
@@ -64,9 +65,10 @@ gulp.task('fonts', function () {
 
 //compile scss
 gulp.task('sass', ['fonts'], function () {
-    return gulp.src(css.in)
+    return gulp.src(css.in)        
         .pipe(sass(css.sassOpts))
         .pipe(concat('main.css'))
+        .pipe(autoprefixer())
         .pipe(gulp.dest(css.out));
 });
 
